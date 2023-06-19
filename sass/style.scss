@@ -1,0 +1,127 @@
+@import "variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: $font;
+}
+
+img,
+svg{
+    max-width: 100%;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: $bg-color;
+}
+
+.bg-img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.main{
+    width: 90%;
+    max-width: 28rem;
+    margin-inline: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    z-index: 999;
+}
+
+.article{
+    display: grid;
+    row-gap: 1.5rem;
+    padding: 1.5rem 1rem;
+}
+
+.headline{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $primary-color;
+}
+
+.text{
+    line-height: 1.5;
+    padding-inline: 1rem;
+    color: $secondary-color;
+}
+
+.offer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+    margin-inline: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $offer-color;
+
+    &__div{
+        display: flex;
+        column-gap: 1rem;
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+    }
+
+    &__name{
+        font-size: 0.9rem;
+        font-weight: 900;
+        color: $primary-color;
+    }
+
+    &__price{
+        font-size: 0.9rem;
+        color: $secondary-color;
+    }
+
+    &__change{
+        font-size: 0.9rem;
+        color: $btn-color;
+        font-weight: 900;
+    }
+}
+
+.btn-div{
+    display: grid;
+    row-gap: 0.5rem;
+
+}
+
+.btn{
+    display: block;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+
+    &__pay{
+        color: $bg-color;
+        background-color: $btn-color;
+        box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.3);
+    }
+
+    &__cancel{
+        color: $secondary-color;  
+    }
+}
